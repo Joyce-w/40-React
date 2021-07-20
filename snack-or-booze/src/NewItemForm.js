@@ -4,6 +4,7 @@ import "./NewItemForm.css"
 
 const NewItemForm = () => {
     const initial_item = {
+        category: null,
         id: "",
         itemName: "",
         description: "",
@@ -13,18 +14,27 @@ const NewItemForm = () => {
 
     const [item, setItem] = useState(initial_item)
 
+    //update function on current form data
     const handleChange = (e) => {
-        const { name, value } = e.target
+        console.log(e.target.name)
+        const { name, value } = e.target;
+        console.log(name, value)
         setItem(item => ({
             ...item,
-            [e.target.name]: e.target.value
+            [name]: value
         }))
     }
-    console.log(item)
 
-
+console.log(item)
     return (
     <Form className="w-25">
+        <FormGroup>
+        <Label for="category">Select</Label>
+        <Input type="select" name="category" id="category">
+          <option value="snack">Snack</option>
+          <option value="drink">Drink</option>
+        </Input>
+      </FormGroup>
         <FormGroup>
             <Label for="itemName">Name</Label>
                 <Input onChange={ handleChange} type="text" name="itemName" id="itemName" placeholder="with a placeholder" />
