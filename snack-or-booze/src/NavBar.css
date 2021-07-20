@@ -6,11 +6,16 @@ nav {
 .nav-item {
   width: 100px;
   text-align: center;
+  margin-right: 4em;
+}
+.nav-item  a{
+  padding: 0 10%;
 }
 
 nav a {
   color: #f0f2f5;
   text-decoration: none;
+
 }
 
 nav a.active {

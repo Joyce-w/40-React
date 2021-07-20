@@ -11,7 +11,9 @@ import Snack from "./FoodItem";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [snacks, setSnacks] = useState([]);
+  const [drinks, setDrinks] = useState([]);
 
+  //get food data
   useEffect(() => {
     async function getSnacks() {
       let snacks = await SnackOrBoozeApi.getSnacks();
@@ -19,6 +21,15 @@ function App() {
       setIsLoading(false);
     }
     getSnacks();
+  }, []);
+  // Get drinks data
+  useEffect(() => {
+    async function getDrinks() {
+      let drinks = await SnackOrBoozeApi.getDrinks();
+      setDrinks(drinks);
+      setIsLoading(false);
+    }
+    getDrinks();
   }, []);
 
   if (isLoading) {
