@@ -3,6 +3,7 @@ import { Redirect, useParams } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardText } from "reactstrap";
 
 function FoodItem({ items, cantFind }) {
+  console.log(items)
   const { id } = useParams();
 
   let snack = items.find(snack => snack.id === id);

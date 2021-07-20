@@ -10,13 +10,13 @@ import {
   ListGroupItem
 } from "reactstrap";
 
-function FoodMenu({ snacks }) {
+function FoodMenu({ snacks, category }) {
   return (
     <section className="col-md-4">
       <Card>
         <CardBody>
           <CardTitle className="font-weight-bold text-center">
-            Food Menu
+            {category} Menu
           </CardTitle>
           <CardText>
             Some quick example text to build on the card title and make up the
@@ -24,7 +24,7 @@ function FoodMenu({ snacks }) {
           </CardText>
           <ListGroup>
             {snacks.map(snack => (
-              <Link to={`/snacks/${snack.id}`} key={snack.id}>
+              <Link to={`/${category}/${snack.id}`} key={snack.id}>
                 <ListGroupItem>{snack.name}</ListGroupItem>
               </Link>
             ))}
