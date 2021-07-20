@@ -10,7 +10,7 @@ import {
   ListGroupItem
 } from "reactstrap";
 
-function FoodMenu({ snacks, category }) {
+function FoodMenu({ items, category }) {
   return (
     <section className="col-md-4">
       <Card>
@@ -23,7 +23,7 @@ function FoodMenu({ snacks, category }) {
             bulk of the card's content.
           </CardText>
           <ListGroup>
-            {snacks.map(snack => (
+            {items.map(snack => (
               <Link to={`/${category}/${snack.id}`} key={snack.id}>
                 <ListGroupItem>{snack.name}</ListGroupItem>
               </Link>

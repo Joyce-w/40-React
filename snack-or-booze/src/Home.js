@@ -20,7 +20,6 @@ function Home({loading, snacks, drinks}) {
           }
           
         </CardBody>
-        
       </Card>
     </section>
   );
