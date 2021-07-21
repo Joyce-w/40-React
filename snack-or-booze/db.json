@@ -27,6 +27,13 @@
       "description": "Crisp!",
       "recipe": "Open can.",
       "serve": "Immediately."
+    },
+    {
+      "id": "Boba-Milk-tea",
+      "name": "Boba Milk tea",
+      "description": "boba and milk what else to say",
+      "recipe": "boba and milk what else to say",
+      "serve": "16oz"
     }
   ],
   "snacks": [
@@ -50,6 +57,13 @@
       "description": "Tart and delicious.",
       "recipe": "Mix arugula, toasted walnuts, and thinly-sliced Parmesan cheese. Dress with lemon and olive oil.",
       "serve": "Place on tiny, precious little plates."
+    },
+    {
+      "id": "Mojito",
+      "name": "Mojito",
+      "description": "Mojito is a traditional Cuban highball. The cocktail often consists of five ingredients.",
+      "recipe": "Mojito is a traditional Cuban highball. The cocktail often consists of five ingredients.",
+      "serve": "highballer"
     }
   ]
 }

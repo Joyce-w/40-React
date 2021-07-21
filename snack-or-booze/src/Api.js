@@ -15,11 +15,22 @@ class SnackOrBoozeApi {
     const result = await axios.get(`${BASE_API_URL}/snacks`);
     return result.data;
   }
-  //get drinks from apo
+  //get drinks from api
   static async getDrinks() {
     const result = await axios.get(`${BASE_API_URL}/drinks`);
     return result.data;
   }
+  //post snacks from api
+  static async postSnacks(snacks) {
+    const result = await axios.post(`${BASE_API_URL}/snacks`, snacks);
+    return result.data;
+  }
+  //post drinks from api
+  static async postDrinks(drinks) {
+    const result = await axios.post(`${BASE_API_URL}/drinks`, drinks);
+    return result.data;
+  }
+  
 
 }
 

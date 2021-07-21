@@ -10,10 +10,12 @@ import Snack from "./FoodItem";
 import NewItemForm from "./NewItemForm";
 
 function App() {
+
+  //how to update snacks/drinks if it is updated in another server?
   const [isLoading, setIsLoading] = useState([]);
   const [snacks, setSnacks] = useState([]);
   const [drinks, setDrinks] = useState([]);
-  
+
   //update loading
   const updateLoading = () => {
     setIsLoading((isLoading) => [...isLoading, false]);
