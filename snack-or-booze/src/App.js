@@ -41,8 +41,19 @@ function App() {
     getDrinks();
   }, []);
 
+  //creating loading to display
   let loading = isLoading.length !== 2 ? <p>Loading &hellip;</p> : null;
 
+  //function to update state for snacks/drinks
+  const updateState = (category, item) => {
+    if (category === 'snack') {
+      setSnacks(snacks => 
+        [...snacks, item])
+    } else {
+      setDrinks(drinks => 
+        [...drinks, item])
+    }
+  }
 
   return (
     <div className="App">
@@ -70,7 +81,7 @@ function App() {
             </Route>
             {/* New Item Form */}
             <Route exact path="/newItem">
-              <NewItemForm/>
+              <NewItemForm updateState={ updateState } snack={snacks} drinks={drinks}/>
             </Route>
             <Route>
               <p>Hmmm. I can't seem to find what you want.</p>

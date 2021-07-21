@@ -5,7 +5,8 @@ import SnackOrBoozeApi from "./Api";
 import Axios from "axios";
 import { useHistory} from "react-router-dom";
 
-const NewItemForm = () => {
+const NewItemForm = ({ updateState }) => {
+    //inital template for snack form
     const initial_item = {
         category: "snack",
         id: "",
@@ -22,12 +23,6 @@ const NewItemForm = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        //make id for new item
-        /**Only replacing first space with dashes */
-        // if (name === 'itemName') {
-        //     let idVal = value.replace(' ', '-')
-        //     item.id = idVal;
-        // }
         setItem(item => ({
             ...item,
             [name]: value
@@ -49,9 +44,11 @@ const NewItemForm = () => {
             
             if (item.category === 'snack') {
                 await SnackOrBoozeApi.postSnacks(newItem)
+                updateState('snack', newItem)
             }
             else{
                 await SnackOrBoozeApi.postDrinks(newItem)
+                updateState('drink', newItem)
             }
         }
         postFood(item)

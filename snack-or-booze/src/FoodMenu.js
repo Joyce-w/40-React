@@ -23,6 +23,7 @@ function FoodMenu({ items, category }) {
             bulk of the card's content.
           </CardText>
           <ListGroup>
+            {/* map through corresponding food menu to create links to each item */}
             {items.map(snack => (
               <Link to={`/${category}/${snack.id}`} key={snack.id}>
                 <ListGroupItem>{snack.name}</ListGroupItem>

@@ -64,6 +64,20 @@
       "description": "Mojito is a traditional Cuban highball. The cocktail often consists of five ingredients.",
       "recipe": "Mojito is a traditional Cuban highball. The cocktail often consists of five ingredients.",
       "serve": "highballer"
+    },
+    {
+      "id": "Cookies",
+      "name": "Cookies",
+      "description": "yum cookies",
+      "recipe": "yum cookies",
+      "serve": "plate ofc"
+    },
+    {
+      "id": "Fish-and-chips",
+      "name": "Fish and chips",
+      "description": "classic british",
+      "recipe": "classic british",
+      "serve": "on a basket"
     }
   ]
 }
