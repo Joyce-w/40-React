@@ -1,3 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `<DocumentFragment />`;
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <nav
+      class="navbar navbar-expand-md"
+    >
+      <a
+        aria-current="page"
+        class="navbar-brand active"
+        href="/"
+      >
+        Snack or Booze
+      </a>
+      <ul
+        class="ml-auto navbar-nav"
+      >
+        <a
+          href="/snacks"
+        >
+          Snacks
+        </a>
+        <a
+          href="/drinks"
+        >
+          Drinks
+        </a>
+        <a
+          href="/newItem"
+        >
+          New Item
+        </a>
+      </ul>
+    </nav>
+  </div>
+</DocumentFragment>
+`;

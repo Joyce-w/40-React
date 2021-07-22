@@ -19,8 +19,8 @@ function FoodMenu({ items, category }) {
             {category} Menu
           </CardTitle>
           <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            <span>Some quick example text to build on the card title and make up the
+            bulk of the card's content.</span>
           </CardText>
           <ListGroup>
             {/* map through corresponding food menu to create links to each item */}

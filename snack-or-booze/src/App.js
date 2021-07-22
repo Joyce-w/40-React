@@ -57,7 +57,6 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
         <NavBar  />
         <main>
           <Switch>
@@ -88,7 +87,6 @@ function App() {
             </Route>
           </Switch>
         </main>
-      </BrowserRouter>
     </div>
   );
 }

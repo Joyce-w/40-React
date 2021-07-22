@@ -1,5 +1,6 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom/extend-expect'
 import NavBar from '../NavBar'
 import {MemoryRouter} from 'react-router-dom'
 
@@ -10,24 +11,18 @@ it("should render w/o crashing", () => {
 
 //snapshot test
 it("matches snapshot", function () {
-    const { asFragment } = render(<MemoryRouter />)
+    const { asFragment } = render(<MemoryRouter><NavBar /></MemoryRouter>)
     expect(asFragment()).toMatchSnapshot();
 })
 
 //specialized tests
-// it("should have text when rendered", function () {
-//     const { getByText } = render(<MemoryRouter />)
-//     let cafeName = getByText('Snack or Booze', {exact: false})
-//     expect(cafeName).toBeInTheHTML();
-// })
+test("Should render NavBar text", function () {
+    //render uses 2 () to render + write on multiple lines
+    const { getByText } = render((
+        <MemoryRouter initialEntries={['/']}>
+            <NavBar />
+        </MemoryRouter>
+    ));
+    expect(getByText(`Snack or Booze`)).toBeInTheDocument();
+});
 
-// test("/snacks route", () => {
-//       const { getByText } = render((
-//     /*only enter  in memory router (page you are currently on)
-//     is going to display content in about route*/
-//     <MemoryRouter initialEntries={['//snacks']}>
-//       <NavBar />
-//     </MemoryRouter>
-//   ));
-//  expect(getByText('Menu')).toBeInTheDocument();
-// } )
