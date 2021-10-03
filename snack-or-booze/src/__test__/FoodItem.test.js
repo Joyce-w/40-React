@@ -37,10 +37,10 @@ it("should render food item page", async () => {
     //hit /snack/:snack route
     const history = createMemoryHistory();
     history.push('/Snacks/nachos')
+    
     render(<Router history={history}>
         <FoodItem items={snack} cantFind="/snack" />
     </Router>
     )
-    debug();
     /**Cannot hit the item page to test content! >:(( */
 })

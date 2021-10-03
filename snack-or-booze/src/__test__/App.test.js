@@ -26,7 +26,7 @@ it("should test whether form submits and goes to / route", () => {
 
 it("should redirect to /snacks for invalid param ", async () => {
     const {getByText, debug} =render(
-        <MemoryRouter initialEntries={['/Snacks/invalidItem']}>
+        <MemoryRouter initialEntries={['/Snacks/nachos']}>
           <App/>
         </MemoryRouter>)
         debug();

@@ -31,7 +31,7 @@ const NewItemForm = ({ updateState }) => {
 
     //handle changes when form is submitted
     const handleSubmit=(e) => {
-        e.preventDefault();
+        // e.preventDefault();
         async function postFood(item) {
 
             let newItem = {
