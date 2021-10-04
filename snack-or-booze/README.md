@@ -3,7 +3,7 @@
 ## Snack or Booze 
 
 
-![Snack or Booze][snack-or-booze]](/snack-or-booze.gif)
+![Snack or Booze](/snack-or-booze.gif)
 
 
 
