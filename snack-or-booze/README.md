@@ -6,8 +6,6 @@
 ![Snack or Booze](/snack-or-booze.gif)
 
 
-
-
 ### Built With
 * [React.js](https://reactjs.org/)
 
